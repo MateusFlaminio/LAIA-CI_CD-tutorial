@@ -21,7 +21,7 @@ def predict_batch():
     data = request.json["features"]
     prediction = model.predict(np.array(data))
     
-    return jsonify({"prediction": [int(p) for p in prediction]})
+    return jsonify({"predictions": [int(p) for p in prediction]})
 
 
 if __name__ == "__main__":
